@@ -1,0 +1,1024 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Navigation */
+.navbar {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00d4ff;
+}
+
+.logo i {
+    font-size: 2rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #00d4ff;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-login, .btn-register {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-login {
+    background: transparent;
+    color: #00d4ff;
+    border: 2px solid #00d4ff;
+}
+
+.btn-login:hover {
+    background: #00d4ff;
+    color: #1a1a2e;
+}
+
+.btn-register {
+    background: #00d4ff;
+    color: #1a1a2e;
+}
+
+.btn-register:hover {
+    background: #00b8e6;
+}
+
+/* Hero Section */
+.hero {
+    padding: 150px 2rem 100px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #00d4ff, #00ff88);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #00d4ff, #00ff88);
+    color: #1a1a2e;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #00d4ff;
+    border: 2px solid #00d4ff;
+}
+
+.btn-secondary:hover {
+    background: #00d4ff;
+    color: #1a1a2e;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.stat-item h3 {
+    font-size: 2rem;
+    color: #00d4ff;
+}
+
+.stat-item p {
+    color: #ccc;
+}
+
+/* Features Section */
+.features {
+    padding: 4rem 2rem;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: #00d4ff;
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+}
+
+.feature-card i {
+    font-size: 3rem;
+    color: #00d4ff;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    margin-bottom: 1rem;
+    color: #00d4ff;
+}
+
+.feature-card p {
+    color: #ccc;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #00d4ff;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #00d4ff;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ccc;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #00d4ff;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(90deg, #00d4ff, #00ff88);
+    color: #1a1a2e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.form-footer a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Dashboard Styles */
+.dashboard {
+    display: none;
+    padding: 100px 2rem 2rem;
+    min-height: 100vh;
+}
+
+.dashboard.active {
+    display: block;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.stat-card h3 {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card .value {
+    font-size: 1.8rem;
+    color: #00d4ff;
+    font-weight: bold;
+}
+
+/* Trading Interface */
+.trading-interface {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.trading-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.trade-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-buy {
+    background: linear-gradient(90deg, #00ff88, #00d4ff);
+    color: #1a1a2e;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    flex: 1;
+}
+
+.btn-sell {
+    background: linear-gradient(90deg, #ff6b6b, #ff8e8e);
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    flex: 1;
+}
+
+/* Terminal Display */
+.terminal-display {
+    background: #0a0a0a;
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.terminal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.terminal-content {
+    height: 300px;
+    overflow-y: auto;
+    color: #00ff88;
+}
+
+.terminal-line {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-left: 3px solid #00d4ff;
+    padding-left: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0, 212, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #00d4ff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Success/Error Messages */
+.message {
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.message.success {
+    background: rgba(0, 255, 136, 0.2);
+    border: 1px solid #00ff88;
+    color: #00ff88;
+}
+
+.message.error {
+    background: rgba(255, 107, 107, 0.2);
+    border: 1px solid #ff6b6b;
+    color: #ff6b6b;
+}
+
+/* Robot Trading Controls */
+.robot-controls {
+    background: rgba(0, 212, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.robot-controls h3 {
+    color: #00d4ff;
+    margin-bottom: 1rem;
+}
+
+.robot-controls p {
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.btn-start-robot {
+    background: linear-gradient(90deg, #00ff88, #00d4ff);
+    color: #1a1a2e;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.btn-stop-robot {
+    background: linear-gradient(90deg, #ff6b6b, #ff8e8e);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Payment Section */
+.payment-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.payment-section h2 {
+    color: #00d4ff;
+    margin-bottom: 1.5rem;
+}
+
+.payment-options {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-deposit {
+    background: linear-gradient(90deg, #00ff88, #00d4ff);
+    color: #1a1a2e;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    flex: 1;
+    min-width: 200px;
+}
+
+.btn-withdraw {
+    background: linear-gradient(90deg, #ff6b6b, #ff8e8e);
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    flex: 1;
+    min-width: 200px;
+}
+
+.btn-transfer {
+    background: linear-gradient(90deg, #ffd700, #ffed4a);
+    color: #1a1a2e;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Platform Download */
+.platform-download {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.platform-download h2 {
+    color: #00d4ff;
+    margin-bottom: 1.5rem;
+}
+
+.download-options {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.download-link {
+    background: rgba(0, 212, 255, 0.1);
+    color: #00d4ff;
+    padding: 1rem 2rem;
+    border: 2px solid #00d4ff;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+    flex: 1;
+    min-width: 250px;
+    justify-content: center;
+}
+
+.download-link:hover {
+    background: #00d4ff;
+    color: #1a1a2e;
+}
+
+/* Withdrawal Modal Specific Styles */
+#withdrawModal .modal-content {
+    max-width: 600px;
+}
+
+#withdrawDetails {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    resize: vertical;
+}
+
+#withdrawDetails:focus {
+    outline: none;
+    border-color: #00d4ff;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 0.5rem;
+    color: #00ff88;
+    font-size: 0.9rem;
+}
+
+/* Price Display */
+.price-display {
+    background: rgba(0, 212, 255, 0.1);
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.price-display .bid {
+    color: #00ff88;
+    margin-right: 1rem;
+}
+
+.price-display .ask {
+    color: #ff6b6b;
+}
+
+/* MetaTrader Status */
+.stat-card .value.connected {
+    color: #00ff88;
+}
+
+.stat-card .value.disconnected {
+    color: #ff6b6b;
+}
+
+/* User Info */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-info span {
+    color: #ccc;
+}
+
+.btn-logout {
+    background: linear-gradient(90deg, #ff6b6b, #ff8e8e);
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Admin Badge */
+.admin-badge {
+    background: linear-gradient(90deg, #ffd700, #ffed4a);
+    color: #1a1a2e;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: #ccc;
+}
+
+.empty-state i {
+    font-size: 3rem;
+    color: #00d4ff;
+    margin-bottom: 1rem;
+}
+
+/* User Card */
+.user-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.user-details h4 {
+    color: #00d4ff;
+    margin-bottom: 1rem;
+}
+
+.user-details p {
+    color: #ccc;
+    margin-bottom: 0.5rem;
+}
+
+.user-details i {
+    color: #00d4ff;
+    margin-right: 0.5rem;
+    width: 20px;
+}
+
+.user-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-approve {
+    background: linear-gradient(90deg, #00ff88, #00d4ff);
+    color: #1a1a2e;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-edit {
+    background: linear-gradient(90deg, #ffd700, #ffed4a);
+    color: #1a1a2e;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-password {
+    background: linear-gradient(90deg, #a855f7, #c084fc);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-delete {
+    background: linear-gradient(90deg, #ff6b6b, #ff8e8e);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Trade Card */
+.trade-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.trade-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.trade-symbol {
+    color: #00d4ff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.trade-type {
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.trade-type.buy {
+    background: rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+}
+
+.trade-type.sell {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+}
+
+.trade-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+}
+
+.trade-detail {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.trade-detail span {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Payment Card */
+.payment-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.payment-info h4 {
+    color: #00d4ff;
+    margin-bottom: 1rem;
+}
+
+.payment-info p {
+    color: #ccc;
+    margin-bottom: 0.5rem;
+}
+
+.payment-info i {
+    color: #00d4ff;
+    margin-right: 0.5rem;
+    width: 20px;
+}
+
+.payment-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.payment-status {
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.payment-status.pending {
+    background: rgba(255, 215, 0, 0.2);
+    color: #ffd700;
+}
+
+.payment-status.completed {
+    background: rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+}
+
+.payment-status.failed {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+}
+
+/* Admin Sections */
+.admin-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.section h2 {
+    color: #00d4ff;
+    margin-bottom: 1.5rem;
+}
+
+/* Terminal Status */
+.terminal-status {
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.terminal-status.Ready {
+    background: rgba(0, 212, 255, 0.2);
+    color: #00d4ff;
+}
+
+.terminal-status.Online {
+    background: rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+}
+
+.terminal-status.Robot {
+    background: rgba(255, 215, 0, 0.2);
+    color: #ffd700;
+}
+
+/* Form Select */
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #00d4ff;
+}
+
+.form-group select option {
+    background: #1a1a2e;
+    color: #fff;
+}
+
+/* Form Textarea */
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    resize: vertical;
+}
+
+.form-group textarea:focus {
+    outline: none;
+    border-color: #00d4ff;
+}
+
+/* Checkbox Styles */
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.form-group label.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 212, 255, 0.5);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 212, 255, 0.7);
+}
